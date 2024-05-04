@@ -7,16 +7,54 @@
 
 import SwiftUI
 
+private enum ContentTabViewSelection: String, Hashable {
+	case home   = "Home"
+	case search = "Search"
+}
+
 struct ContentView: View {
+	
+	@State private var selection: ContentTabViewSelection = .home
+	
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+		TabView(selection: $selection) {
+			TestContentView(title: ContentTabViewSelection.home.rawValue)
+				.tag(ContentTabViewSelection.home)
+				.tabItem {
+					Label(ContentTabViewSelection.home.rawValue, systemImage: "house")
+				}
+			TestContentView(title:  ContentTabViewSelection.search.rawValue)
+				.tag(ContentTabViewSelection.search)
+				.tabItem {
+					Label(ContentTabViewSelection.search.rawValue, systemImage: "star")
+				}
+		}
     }
+}
+
+struct TestContentView: View {
+	
+	let title: String
+	
+	var body: some View {
+		NavigationStack {
+			VStack {
+				NavigationLink("Go Somewhere") {
+					TestPushContentView()
+				}
+			}
+			.navigationTitle(title)
+		}
+	}
+	
+	struct TestPushContentView: View {
+		
+		var body: some View {
+			NavigationLink("AGAIN!") {
+				TestPushContentView()
+			}
+		}
+	}
 }
 
 #Preview {
