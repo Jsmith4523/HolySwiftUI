@@ -38,10 +38,27 @@ struct TestContentView: View {
 	
 	var body: some View {
 		NavigationStack {
-			VStack {
-				NavigationLink("Go Somewhere") {
-					TestPushContentView()
+			ZStack(alignment: .bottomTrailing)  {
+				VStack {
+					NavigationLink("Go Somewhere") {
+						TestPushContentView()
+					}
 				}
+				.frame(maxWidth: .infinity)
+				.frame(maxHeight: .infinity)
+				Button {
+					
+				} label: {
+					Image(systemName: "plus")
+						.padding()
+						.font(.system(size: 22))
+						.foregroundStyle(.white)
+						.frame(width: 50, height: 50)
+						.background(Color.blue)
+						.clipShape(Circle())
+						.padding()
+				}
+				.additionalSafeAreaInsetModifier(inset: UIEdgeInsets(top: 0, left: 0, bottom: 52, right: 0))
 			}
 			.navigationTitle(title)
 		}
