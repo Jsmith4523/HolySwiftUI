@@ -11,9 +11,13 @@
 		24765C7F2BE6F9CC00AD83F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24765C7E2BE6F9CC00AD83F3 /* ContentView.swift */; };
 		24765C812BE6F9CD00AD83F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24765C802BE6F9CD00AD83F3 /* Assets.xcassets */; };
 		24765C842BE6F9CD00AD83F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24765C832BE6F9CD00AD83F3 /* Preview Assets.xcassets */; };
+<<<<<<< HEAD
 		24E9C68E2C7488360084F9EC /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C68D2C7488360084F9EC /* ArticleViewModel.swift */; };
 		24E9C6902C74886B0084F9EC /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C68F2C74886B0084F9EC /* ArticleService.swift */; };
 		24E9C6932C748A280084F9EC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C6922C748A280084F9EC /* Article.swift */; };
+=======
+		24E6C4C12C490EF300D15658 /* TabViewItemWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6C4C02C490EF300D15658 /* TabViewItemWrapperView.swift */; };
+>>>>>>> origin/TabView
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +26,13 @@
 		24765C7E2BE6F9CC00AD83F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24765C802BE6F9CD00AD83F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24765C832BE6F9CD00AD83F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		24E9C68D2C7488360084F9EC /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		24E9C68F2C74886B0084F9EC /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		24E9C6922C748A280084F9EC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+=======
+		24E6C4C02C490EF300D15658 /* TabViewItemWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewItemWrapperView.swift; sourceTree = "<group>"; };
+>>>>>>> origin/TabView
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 				24E9C68C2C7488260084F9EC /* View Model */,
 				24765C7C2BE6F9CC00AD83F3 /* HolySwiftUIApp.swift */,
 				24765C7E2BE6F9CC00AD83F3 /* ContentView.swift */,
+				24E6C4C02C490EF300D15658 /* TabViewItemWrapperView.swift */,
 				24765C802BE6F9CD00AD83F3 /* Assets.xcassets */,
 				24765C822BE6F9CD00AD83F3 /* Preview Content */,
 			);
@@ -162,9 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				24E9C6902C74886B0084F9EC /* ArticleService.swift in Sources */,
 				24E9C68E2C7488360084F9EC /* ArticleViewModel.swift in Sources */,
 				24E9C6932C748A280084F9EC /* Article.swift in Sources */,
+=======
+				24E6C4C12C490EF300D15658 /* TabViewItemWrapperView.swift in Sources */,
+>>>>>>> origin/TabView
 				24765C7F2BE6F9CC00AD83F3 /* ContentView.swift in Sources */,
 				24765C7D2BE6F9CC00AD83F3 /* HolySwiftUIApp.swift in Sources */,
 			);
@@ -300,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HolySwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = H5L7QT5U7B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -329,6 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HolySwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = H5L7QT5U7B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
