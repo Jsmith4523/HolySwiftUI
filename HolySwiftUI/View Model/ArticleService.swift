@@ -20,16 +20,25 @@ final class ArticleService: NSObject {
     
     func fetchArticles() async throws -> [Article] {
         guard let newsURL else { throw ArticleServiceError.invalidURL }
-        let request = URLRequest(url: newsURL)
+        var request = URLRequest(url: newsURL)
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { throw ArticleServiceError.responseFailed }
         
         do {
-            let articles = try JSONDecoder().decode([Article].self, from: data)
-            return articles
+            let response = try JSONDecoder().decode(ArticleResponse.self, from: data)
+            return response.articles
         } catch {
+            print(error)
             throw ArticleServiceError.decodingFailed
         }
     }
 } 
+
+struct ArticleResponse: Decodable {
+    let articles: [Article]
+    
+    enum CodingKeys: String, CodingKey {
+        case articles = "articles"
+    }
+}

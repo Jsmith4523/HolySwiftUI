@@ -39,7 +39,7 @@ extension NSNotification.Name {
 }
 
 #Preview {
-	TabViewItemWrapperView(path: .constant(.init()), selection: .home) {
+    TabViewItemWrapperView(path: .constant(.init()), selection: .articles) {
 		Text("Hello, World!")
 	}
 }
