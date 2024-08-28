@@ -18,11 +18,15 @@ struct ArticlesListView: View {
     var body: some View {
         LazyVStack {
             ForEach(articles) { article in
-                ArticleCellView(article: article)
+                NavigationLink(value: article) {
+                    ArticleCellView(article: article)
+                }
                 Divider()
             }
         }
-        .padding()
+        .navigationDestination(for: Article.self) { article in
+            ArticleDetailView(article: article)
+        }
     }
 }
 

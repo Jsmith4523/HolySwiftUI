@@ -24,6 +24,7 @@ struct ContentView: View {
                     ContentTabViewSelection.search.label
 				}
 		}
+        .tint(.primary)
     }
 	
 	var binding: Binding<ContentTabViewSelection> {

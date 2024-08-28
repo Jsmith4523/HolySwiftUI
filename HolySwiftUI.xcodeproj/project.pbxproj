@@ -17,6 +17,8 @@
 		24C8483D2C7F9BAA0009CBFD /* ArticlesLoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8483C2C7F9BAA0009CBFD /* ArticlesLoadState.swift */; };
 		24C8483F2C7F9C100009CBFD /* ArticlesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8483E2C7F9C100009CBFD /* ArticlesListView.swift */; };
 		24C848442C7FAA7F0009CBFD /* ArticleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C848432C7FAA7F0009CBFD /* ArticleSearchView.swift */; };
+		24C848462C7FAD960009CBFD /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C848452C7FAD960009CBFD /* ArticleDetailView.swift */; };
+		24C8484B2C7FBD0E0009CBFD /* ContentOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8484A2C7FBD0E0009CBFD /* ContentOffsetObserver.swift */; };
 		24E6C4C12C490EF300D15658 /* TabViewItemWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6C4C02C490EF300D15658 /* TabViewItemWrapperView.swift */; };
 		24E9C6962C7515C70084F9EC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C6942C7515C70084F9EC /* Article.swift */; };
 		24E9C69A2C7515DA0084F9EC /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C6972C7515DA0084F9EC /* ArticleService.swift */; };
@@ -35,6 +37,8 @@
 		24C8483C2C7F9BAA0009CBFD /* ArticlesLoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesLoadState.swift; sourceTree = "<group>"; };
 		24C8483E2C7F9C100009CBFD /* ArticlesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListView.swift; sourceTree = "<group>"; };
 		24C848432C7FAA7F0009CBFD /* ArticleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchView.swift; sourceTree = "<group>"; };
+		24C848452C7FAD960009CBFD /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		24C8484A2C7FBD0E0009CBFD /* ContentOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentOffsetObserver.swift; sourceTree = "<group>"; };
 		24E6C4C02C490EF300D15658 /* TabViewItemWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewItemWrapperView.swift; sourceTree = "<group>"; };
 		24E9C6942C7515C70084F9EC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		24E9C6972C7515DA0084F9EC /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		243B066B2C7F9A22003ECA5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24C848472C7FB4E10009CBFD /* Utilities */,
 				24C848422C7FAA610009CBFD /* Search */,
 				24C848412C7FAA540009CBFD /* Tab View */,
 				24C848402C7FAA4F0009CBFD /* Articles */,
@@ -113,6 +118,7 @@
 			children = (
 				243B06692C7F99E8003ECA5E /* ArticlesView.swift */,
 				24C8483E2C7F9C100009CBFD /* ArticlesListView.swift */,
+				24C848452C7FAD960009CBFD /* ArticleDetailView.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -133,6 +139,14 @@
 				24C848432C7FAA7F0009CBFD /* ArticleSearchView.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		24C848472C7FB4E10009CBFD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				24C8484A2C7FBD0E0009CBFD /* ContentOffsetObserver.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		24E9C6952C7515C70084F9EC /* Model */ = {
@@ -224,10 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24C8483D2C7F9BAA0009CBFD /* ArticlesLoadState.swift in Sources */,
+				24C848462C7FAD960009CBFD /* ArticleDetailView.swift in Sources */,
 				24C8483F2C7F9C100009CBFD /* ArticlesListView.swift in Sources */,
 				243B066D2C7F9A39003ECA5E /* TabViewSelection.swift in Sources */,
 				24C848442C7FAA7F0009CBFD /* ArticleSearchView.swift in Sources */,
 				24E9C6962C7515C70084F9EC /* Article.swift in Sources */,
+				24C8484B2C7FBD0E0009CBFD /* ContentOffsetObserver.swift in Sources */,
 				243B06682C7F9779003ECA5E /* ArticleCellView.swift in Sources */,
 				24E6C4C12C490EF300D15658 /* TabViewItemWrapperView.swift in Sources */,
 				24765C7F2BE6F9CC00AD83F3 /* TabView.swift in Sources */,

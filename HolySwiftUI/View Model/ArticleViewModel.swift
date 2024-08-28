@@ -20,7 +20,7 @@ class ArticleViewModel: ObservableObject {
         let articles = try await articleService.fetchArticles()
         DispatchQueue.main.async { [weak self] in
             let filteredArticles = articles.filter({$0.title != "[Removed]"})
-            self?.articles.append(contentsOf: articles.filter({$0.title != "[Removed]"}))
+            self?.articles = filteredArticles.shuffled()
         }
     }
 }

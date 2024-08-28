@@ -16,7 +16,9 @@ struct ArticleCellView: View {
             imageView
             articleDescription
         }
+        .padding()
         .background(Color(uiColor: .systemBackground))
+        .multilineTextAlignment(.leading)
     }
     
     private var imageView: some View {

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ArticlesView: View {
     
+    @State private var contentOffset: CGFloat = 0
+    
     @State private var loadState: ArticlesLoadState = .loading
     @State private var articles: [Article] = []
     
@@ -18,36 +20,43 @@ struct ArticlesView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            TabViewItemWrapperView(path: $path, selection: .articles) {
+            TabViewItemWrapperView(contentOffset: $contentOffset, path: $path, selection: .articles) {
                 ScrollView {
-                    switch loadState {
-                    case .loading:
-                        ProgressView().task(fetchArticles)
-                    case .loaded:
-                        ArticlesListView(articles: $articles)
-                    case .empty:
-                        //Project target is set to 17.0 for these views...
-                        ContentUnavailableView("There are no articles yet.", systemImage: "newspaper").padding()
-                    case .error:
-                        ContentUnavailableView("Something went wrong. Please try again", systemImage: "exclamationmark.triangle")
+                    ZStack {
+                        switch loadState {
+                        case .loading:
+                            ProgressView().task(fetchArticles)
+                        case .loaded:
+                            ArticlesListView(articles: $articles)
+                        case .empty:
+                            //Project target is set to 17.0 for these views...
+                            ContentUnavailableView("There are no articles yet.", systemImage: "newspaper").padding()
+                        case .error:
+                            ContentUnavailableView("Something went wrong. Please try again", systemImage: "exclamationmark.triangle")
+                        }
                     }
+                    .contentOffsetObserver()
                 }
-                .refreshable(action: fetchArticles)
                 .navigationTitle("Articles")
                 .navigationBarTitleDisplayMode(.inline)
+                .contentOffsetValue($contentOffset)
                 .onReceive(articlesVM.$articles) { articles in
                     DispatchQueue.main.async {
                         self.articles = articles
                     }
                 }
             }
+            .refreshable {
+                await fetchArticles()
+            }
         }
     }
     
-    @MainActor @Sendable private func fetchArticles() async {
+    @MainActor private func fetchArticles() async {
         do {
             try await articlesVM.fetchArticles()
             self.loadState = .loaded
+            print("Fired")
         } catch {
             print(error)
             if articles.isEmpty {

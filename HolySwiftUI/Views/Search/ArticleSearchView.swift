@@ -13,11 +13,11 @@ struct ArticleSearchView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            TabViewItemWrapperView(path: $path, selection: .search) {
-                VStack {
-                    
-                }
-            }
+//            TabViewItemWrapperView(path: $path, selection: .search) {
+//                VStack {
+//                    
+//                }
+//            }
         }
     }
 }

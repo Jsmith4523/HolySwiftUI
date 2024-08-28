@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Article: Decodable, Identifiable {
+public struct Article: Decodable, Identifiable, Hashable {
     public var id: UUID
     
     let source: Article.Source
@@ -19,7 +19,7 @@ public struct Article: Decodable, Identifiable {
     let publishedAt: String
     let content: String
     
-    struct Source: Codable {
+    struct Source: Codable, Hashable {
         let id: String?
         let name: String?
     }
