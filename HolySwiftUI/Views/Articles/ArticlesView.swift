@@ -56,7 +56,6 @@ struct ArticlesView: View {
         do {
             try await articlesVM.fetchArticles()
             self.loadState = .loaded
-            print("Fired")
         } catch {
             print(error)
             if articles.isEmpty {
