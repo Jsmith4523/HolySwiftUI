@@ -10,6 +10,8 @@
 		243B06682C7F9779003ECA5E /* ArticleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B06672C7F9779003ECA5E /* ArticleCellView.swift */; };
 		243B066A2C7F99E8003ECA5E /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B06692C7F99E8003ECA5E /* ArticlesView.swift */; };
 		243B066D2C7F9A39003ECA5E /* TabViewSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B066C2C7F9A39003ECA5E /* TabViewSelection.swift */; };
+		246A7AEB2C8CDDE200B979B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A7AEA2C8CDDE200B979B4 /* ProfileView.swift */; };
+		246A7AED2C8CDE3900B979B4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A7AEC2C8CDE3900B979B4 /* UserViewModel.swift */; };
 		24765C7D2BE6F9CC00AD83F3 /* HolySwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24765C7C2BE6F9CC00AD83F3 /* HolySwiftUIApp.swift */; };
 		24765C7F2BE6F9CC00AD83F3 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24765C7E2BE6F9CC00AD83F3 /* TabView.swift */; };
 		24765C812BE6F9CD00AD83F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24765C802BE6F9CD00AD83F3 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		243B06672C7F9779003ECA5E /* ArticleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellView.swift; sourceTree = "<group>"; };
 		243B06692C7F99E8003ECA5E /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
 		243B066C2C7F9A39003ECA5E /* TabViewSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSelection.swift; sourceTree = "<group>"; };
+		246A7AEA2C8CDDE200B979B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		246A7AEC2C8CDE3900B979B4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		24765C792BE6F9CC00AD83F3 /* HolySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24765C7C2BE6F9CC00AD83F3 /* HolySwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolySwiftUIApp.swift; sourceTree = "<group>"; };
 		24765C7E2BE6F9CC00AD83F3 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
@@ -67,12 +71,21 @@
 		243B066B2C7F9A22003ECA5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				246A7AE92C8CDDDC00B979B4 /* Profile */,
 				24C848472C7FB4E10009CBFD /* Utilities */,
 				24C848422C7FAA610009CBFD /* Search */,
 				24C848412C7FAA540009CBFD /* Tab View */,
 				24C848402C7FAA4F0009CBFD /* Articles */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		246A7AE92C8CDDDC00B979B4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				246A7AEA2C8CDDE200B979B4 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		24765C702BE6F9CC00AD83F3 = {
@@ -163,6 +176,7 @@
 			children = (
 				24E9C6972C7515DA0084F9EC /* ArticleService.swift */,
 				24E9C6982C7515DA0084F9EC /* ArticleViewModel.swift */,
+				246A7AEC2C8CDE3900B979B4 /* UserViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -244,7 +258,9 @@
 				24C848442C7FAA7F0009CBFD /* ArticleSearchView.swift in Sources */,
 				24E9C6962C7515C70084F9EC /* Article.swift in Sources */,
 				24C8484B2C7FBD0E0009CBFD /* ContentOffsetObserver.swift in Sources */,
+				246A7AEB2C8CDDE200B979B4 /* ProfileView.swift in Sources */,
 				243B06682C7F9779003ECA5E /* ArticleCellView.swift in Sources */,
+				246A7AED2C8CDE3900B979B4 /* UserViewModel.swift in Sources */,
 				24E6C4C12C490EF300D15658 /* TabViewItemWrapperView.swift in Sources */,
 				24765C7F2BE6F9CC00AD83F3 /* TabView.swift in Sources */,
 				24E9C69A2C7515DA0084F9EC /* ArticleService.swift in Sources */,

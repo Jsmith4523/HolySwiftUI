@@ -44,7 +44,7 @@ public struct Article: Decodable, Identifiable, Hashable {
         self.title = try container.decode(String.self, forKey: .title)
         self.description = try container.decode(String.self, forKey: .description)
         self.url = try container.decode(URL.self, forKey: .url)
-        self.urlToImage = try container.decodeIfPresent(URL.self, forKey: .urlToImage)
+        self.urlToImage = try? container.decodeIfPresent(URL.self, forKey: .urlToImage) ?? nil
         self.publishedAt = try container.decode(String.self, forKey: .publishedAt)
         self.content = try container.decode(String.self, forKey: .content)
     }
